@@ -1,0 +1,10 @@
+name = "hono-template"
+main = "src/index.ts"
+compatibility_flags = ["nodejs_compat_v2"]
+compatibility_date = "2024-10-22"
+workers_dev = false
+routes = ["https://some-domain.com/*"]
+
+[vars]
+AUTHORITY = "<some value>"
+AUDIENCE = "<some value>"
