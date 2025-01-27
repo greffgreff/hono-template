@@ -1,7 +1,7 @@
 import { Hono } from 'hono'
-import { withAuthentication } from 'src/hooks/with-authentication'
 import { greet, handleData } from 'src/services/service'
-import { validateRequestBody } from 'src/validation/projects'
+import { withAuthentication } from 'src/hooks/with-authentication'
+import { validateRequestBody } from 'src/validation/request-body'
 
 const app = new Hono()
 
