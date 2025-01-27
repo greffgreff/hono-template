@@ -1,10 +1,11 @@
 import { Hono } from 'hono'
 import { withAuthentication } from 'src/hooks/with-authentication'
 import { greet, handleData } from 'src/services/service'
+import { validateRequestBody } from 'src/validation/projects'
 
 const app = new Hono()
 
 app.get('/', greet)
-app.get('/', withAuthentication, handleData)
+app.get('/', validateRequestBody, withAuthentication, handleData)
 
 export default app

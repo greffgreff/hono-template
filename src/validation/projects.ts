@@ -7,4 +7,4 @@ const requestBodySchema = {
     .max(35, '`property1` must not exceed 35 characters'),
   property2: number().optional(),
 }
-export const validatedRequestBody = zValidator('json', object(requestBodySchema))
+export const validateRequestBody = zValidator('json', object(requestBodySchema))
